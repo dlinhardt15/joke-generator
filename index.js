@@ -17,7 +17,6 @@ function deliverJoke (data) {
         document.querySelector("#setup").textContent = jokeSetUp
         const jokePunchline = joke.delivery
         document.querySelector("#punchline").textContent = jokePunchline
-        document
         freeJoke.addEventListener("click", (e) => {
             e.preventDefault()
             const jokeSection = document.querySelector("#joke-section")
