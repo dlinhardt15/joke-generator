@@ -28,10 +28,39 @@ function deliverJoke (data) {
             e.preventDefault()
             const punchlineSection = document.querySelector("#punchline-section")
             punchlineSection.removeAttribute("style")
-})
+        })
+        // const review = document.querySelector("#review")
+        // const submit = document.querySelector("#reviewButton")
+        // submit.addEventListener("submit", (e) => {
+        //     e.preventDefault()
+        //     console.log(review.value)
+        // })
     })
 }
-
 // When "good" is input into the text field and submitted, a thumbs up gif will appear. If anything else is typed in, an "oh well" gif will appear.
 
-//When the mouse hovers over the image, the page will reset.
+const review = document.querySelector("#review")
+const submit = document.querySelector("#form")
+submit.addEventListener("submit", (e) => {
+    e.preventDefault()
+    if (review.value == "good") {
+        document.querySelector("#review-image").removeAttribute("style")
+        document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
+    }
+    else if (review.value == "Good") {
+        document.querySelector("#review-image").removeAttribute("style")
+        document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
+    }
+    else {
+        document.querySelector("#review-image").removeAttribute("style")
+        document.querySelector("#image").src = "https://media0.giphy.com/media/QZs8O2Z4E95YmRg0QB/giphy.gif"
+    }
+})
+
+// When the mouse hovers over the image, the page will reset.
+
+const image = document.querySelector("#image")
+image.addEventListener("mouseover", e => {
+    e.preventDefault()
+    window.location.reload()
+})
