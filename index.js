@@ -7,7 +7,7 @@ function fetchJokes() {
 document.addEventListener("DOMContentLoaded", () => fetchJokes())
 
 // When clicking on the "free joke" button, the tag with id "joke-section" will be populated and the "gimme the punchline" button will appear
-
+// hi
 const freeJoke = document.querySelector("#jokeButton")
 
 function deliverJoke (data) {
