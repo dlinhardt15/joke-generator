@@ -7,7 +7,7 @@ function fetchJokes() {
 document.addEventListener("DOMContentLoaded", () => fetchJokes())
 
 // When clicking on the "free joke" button, the tag with id "joke-section" will be populated and the "gimme the punchline" button will appear
-// hi
+
 const freeJoke = document.querySelector("#jokeButton")
 
 function deliverJoke (data) {
@@ -39,11 +39,11 @@ submit.addEventListener("submit", (e) => {
     e.preventDefault()
     if (review.value === "good") {
         document.querySelector("#review-image").removeAttribute("style")
-        document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
+        document.querySelector("#image").src = "https://c.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif"
     }
     else if (review.value === "Good") {
         document.querySelector("#review-image").removeAttribute("style")
-        document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
+        document.querySelector("#image").src = "https://c.tenor.com/A-ozELwp694AAAAC/thumbs-thumbs-up-kid.gif"
     }
     else {
         document.querySelector("#review-image").removeAttribute("style")
