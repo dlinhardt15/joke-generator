@@ -28,25 +28,20 @@ function deliverJoke (data) {
             const punchlineSection = document.querySelector("#punchline-section")
             punchlineSection.removeAttribute("style")
         })
-        // const review = document.querySelector("#review")
-        // const submit = document.querySelector("#reviewButton")
-        // submit.addEventListener("submit", (e) => {
-        //     e.preventDefault()
-        //     console.log(review.value)
-        // })
     })
 }
 // When "good" is input into the text field and submitted, a thumbs up gif will appear. If anything else is typed in, an "oh well" gif will appear.
 
 const review = document.querySelector("#review")
 const submit = document.querySelector("#form")
+
 submit.addEventListener("submit", (e) => {
     e.preventDefault()
-    if (review.value == "good") {
+    if (review.value === "good") {
         document.querySelector("#review-image").removeAttribute("style")
         document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
     }
-    else if (review.value == "Good") {
+    else if (review.value === "Good") {
         document.querySelector("#review-image").removeAttribute("style")
         document.querySelector("#image").src = "https://media3.giphy.com/media/111ebonMs90YLu/200.gif"
     }
